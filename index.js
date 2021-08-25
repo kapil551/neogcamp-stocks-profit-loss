@@ -46,7 +46,9 @@ function calculateProfitAndLoss(initial, quantity, current) {
         let lossPerQuantity = initial - current;
         let totalLoss = lossPerQuantity * quantity;
 
-        let lossPercentage = (totalLoss/initial)*100;
+        let initialTotal = initial * quantity;
+
+        let lossPercentage = (totalLoss/initialTotal)*100;
 
         // Limit the Decimal points to 2 digits, using toFixed(digits)
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
@@ -63,7 +65,9 @@ function calculateProfitAndLoss(initial, quantity, current) {
         let profitPerQuantity = current - initial;
         let totalProfit = profitPerQuantity * quantity;
 
-        let profitPercentage = (totalProfit/initial)*100;
+        let initialTotal = initial * quantity;
+
+        let profitPercentage = (totalProfit/initialTotal)*100;
 
         // Limit the Decimal points to 2 digits, using toFixed(digits)
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
